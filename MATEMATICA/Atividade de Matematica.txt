@@ -1,0 +1,88 @@
+/*
+Nome do exercicio: material de matematica
+Data: 25/02/2025 
+Descricao: 
+*/
+
+int resultado = 0;
+int numeroA = 0;
+
+int contador = 0;
+
+int valor1 = 4;
+int valor2 = 7;
+float resultadoReal = 0;
+
+
+void setup()
+{
+  Serial.begin(9600);
+  numeroA = map(600, 0, 1023, 0, 100);
+  Serial.println(numeroA);
+  resultado = constrain (numeroA, 20, 80);
+  Serial.println(resultado);
+ 
+ 
+  ++contador;
+  Serial.println(contador);
+  ++contador;
+  Serial.println(contador);  
+  ++contador;
+  Serial.println(contador);
+  ++contador;
+  Serial.println(contador);
+  ++contador;
+  Serial.println(contador);
+  ++contador;
+  Serial.println(contador);
+  ++contador;
+  Serial.println(contador);
+  ++contador;
+  Serial.println(contador);
+  ++contador;
+  Serial.println(contador);
+  ++contador;
+  Serial.println(contador);
+  ++contador;
+  Serial.println(contador);
+  ++contador;
+
+ --contador;
+  Serial.println(contador);
+  --contador;
+  Serial.println(contador);
+  --contador;
+  Serial.println(contador);
+  --contador;
+  Serial.println(contador);
+  --contador;
+  Serial.println(contador);
+  --contador;
+  Serial.println(contador);
+  --contador;
+  Serial.println(contador);
+  --contador;
+  Serial.println(contador);
+  --contador;
+  Serial.println(contador);
+  --contador;
+   Serial.println(contador);
+  --contador;
+ 
+  resultado = valor1 + valor2;
+    Serial.println(resultado);
+ 
+  resultado = 11/2;
+  Serial.println (resultado);
+ 
+  resultadoReal = (float)11 / (float)2;
+  Serial.println (resultadoReal, 2);
+
+ 
+ 
+}
+
+void loop()
+{
+ 
+}
