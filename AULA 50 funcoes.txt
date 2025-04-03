@@ -1,0 +1,47 @@
+#include Arduino.h
+PROTOTIPOS DAS FUNCOES
+ define as funcoes e o que elas pedem 
+void ligaLed(int);
+void desligaLed(int);
+void piscaLed(int, unsigned long);
+int somaDeDoisNumeros (int, int);
+
+void setup()
+{
+  pinMode(2,OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() 
+{
+  piscaLed(2,100);  faz o pino 2 piscar e define 100 milisegundos
+  int resultado = somaDeDoisNumeros(9,3); joga a soma dos numeros em uma variavel
+  Serial.println(resultado); imprime o resultado da soma
+}
+
+void ligaLed(int pinLed)  e uma funcao que pede um int para saber que pino deve ser ligado
+ funcao do tipo void pois nao precisa que retorne nada
+{
+  digitalWrite(pinLed,HIGH); liga o pino que for definido
+
+}
+void desligaLed(int pinLed) e uma funcao que pede um int para saber que pino deve ser desligado
+ funcao do tipo void pois nao precisa que retorne nada
+{
+  
+  digitalWrite(pinLed,LOW); desliga o pino que foi definido
+
+}
+void piscaLed(int pinLed, unsigned long tempo) e uma funcao que pede um int para saber o pino e um tempo que vai ficar ligado e desligado
+ funcao do tipo void pois nao precisa que retorne nada
+{
+  digitalWrite(pinLed,HIGH); liga o pino que for definido
+  delay(tempo);  espera o tempo que foi definido
+  digitalWrite(pinLed,LOW); desliga o pino que foi definido
+  delay(tempo); espera o tempo que foi definido
+}
+int somaDeDoisNumeros (int numeroA, int numeroB) e uma funcao que pede dois numeros do tipo int para soma-los 
+funcao do tipo int pois precisa retornar a soma
+{
+ return (numeroA + numeroB); soma os numeros definidos
+}
